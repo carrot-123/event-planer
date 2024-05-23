@@ -49,10 +49,10 @@ app.event("reaction_added", async ({ event, client, logger }) => {
             channel: party,
             message_ts: event.item.ts,
           });
-
+          const num_members = members.members.length - 1;
           const reminder = await client.chat.postMessage({
             channel: party,
-            text: `${members.members.length} people are going to this event! React to the original message to join: ${permalink.permalink}`,
+            text: `${num_members} people are going to this event! React to the original message to join: ${permalink.permalink}`,
           });
         }
       }
