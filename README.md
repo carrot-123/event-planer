@@ -1,1 +1,1 @@
-# event-planer
+# event-planner
